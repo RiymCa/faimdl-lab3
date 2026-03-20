@@ -3,7 +3,7 @@ from torch import nn
 from models.customNet import CustomNet
 from train import train
 from eval import validate
-from dataloader import train_loader, val_loader
+from data.dataloader import train_loader, val_loader
 
 device = torch.device("mps" if torch.backends.mps.is_available() else "cuda" if torch.cuda.is_available() else "cpu")
 print(f"Using device: {device}")
